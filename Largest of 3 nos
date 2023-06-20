@@ -1,0 +1,28 @@
+//Largest of 3 numbers
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+    cout<<"Enter no.1 : ";
+    cin>>a;cout<<endl;
+    cout<<"Enter no.2 : ";
+    cin>>b;cout<<endl;
+    cout<<"Enter no.3 : ";
+    cin>>c;cout<<endl;
+    if(a>=b && a>=c){
+        cout<<"The largest number is : "<<a;
+        //return 0;
+    }
+    else if(b>=a && b>=c){
+        cout<<"The largest number is : "<<b;
+       //return 0;
+    }
+    else if(c>=a && c>=b){
+        cout<<"The largest number is : "<<c;
+       //return 0;
+    }
+    return 0;
+}
