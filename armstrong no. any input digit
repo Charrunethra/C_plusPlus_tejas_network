@@ -1,0 +1,31 @@
+//Armstrong number
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter the number: ";
+    cin>>n;
+    int temp = n;
+    int count=0;
+    while(temp!=0){ //123
+        temp/=10;
+        count++;
+    }
+    temp=n;
+    int result = 0, power;
+    while(temp!=0){
+        int r = temp%10;
+        power = pow(r,count); // pow(r,count) or round(pow(r,count))-->gives equivalent int
+        result+=power;
+        temp/=10;
+    }
+    if(n==result)
+    cout<<n<<" is the armstrong number";
+    else
+    cout<<n<<" is not a armstrong number";
+
+    return 0;
+}
