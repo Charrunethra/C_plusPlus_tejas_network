@@ -1,0 +1,59 @@
+count()  -> O(N)
+https://www.geeksforgeeks.org/std-count-cpp-stl/
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int arr[] = { 3, 2, 1, 3, 3, 5, 3 };
+    int n = sizeof(arr) / sizeof(arr[0]); // sizeOf(arr) = 28 -> 7*4 = 28
+    cout <<
+ 
+        "  Number of times 3 appears : "
+    << count(arr, arr + n, 3);
+ 
+    return 0;
+}
+Time complexity: O(n)
+Here n is size of array.
+Auxiliary Space: O(1)
+As constant extra space is used.
+
+// C++ program for count in C++ STL for
+// a vector
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    vector<int> vect{ 3, 2, 1, 3, 3, 5, 3 };
+    cout << "Number of times 3 appears : "
+         << count(vect.begin(), vect.end(), 3);
+ 
+    return 0;
+}
+Same complexity as before
+Time complexity: O(n)
+Here n is size of vector.
+Auxiliary Space: O(1)
+As constant extra space is used.
+
+// C++ program for the count in C++ STL
+// for a string
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    string str = "geeksforgeeks";
+ 
+    cout << "Number of times 'e' appears : "
+         << count(str.begin(), str.end(), 'e');
+ 
+    return 0;
+}
+Same complexity as before
+Time complexity: O(n)
+Here n is the length of string.
+Auxiliary Space: O(1)
+As constant extra space is used.
