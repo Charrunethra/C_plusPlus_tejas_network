@@ -1,0 +1,33 @@
+//basic linked list in C++
+struct Node{
+    int data;
+    Node *link;
+};
+
+#include <iostream>
+
+using namespace std;
+
+typedef Node* nodeptr;
+void insert(Node* &head, int data){ // instead of Node* -> also nodeptr can be written
+    Node* temp = new Node;//nodeptr temp=new Node
+    temp->data = data;
+    temp->link = head;
+    head = temp;
+}
+int main()
+{
+    nodeptr head = new Node; //Node* head = new Node; or Node* head; head = new Node
+    head->data = 20;
+    head->link = NULL;
+    
+    insert(head,30);
+    nodeptr temp;
+    temp = head;
+    while(temp!=NULL){
+        cout<<temp->data<<endl;
+        temp = temp->link;
+    }
+    return 0;
+}
+//if u r giving the method here in c++, 1st give a declaration top and then start here
